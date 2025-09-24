@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 配置静态文件服务，支持Adobe CEP扩展
-app.use(express.static(path.join(__dirname), {
+app.use(express.static(path.join(__dirname, '..'), {
     dotfiles: 'ignore',
     etag: false,
     extensions: ['html', 'htm', 'js', 'css', 'png', 'jpg', 'gif', 'svg', 'ico', 'jsx'],
@@ -337,63 +337,5 @@ app.use((err, req, res, next) => {
     `);
 });
 
-// 启动服务器
-const server = app.listen(PORT, () => {
-    console.log('='.repeat(70));
-    console.log('🚀 TuringCoocin 多项目服务器启动成功！');
-    console.log('⚡ 技术栈: Node.js + Express.js');
-    console.log('='.repeat(70));
-    console.log(`📍 服务器地址: http://localhost:${PORT}`);
-    console.log(`📁 根目录: ${__dirname}`);
-    console.log(`🌍 环境: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`🔧 Node.js版本: ${process.version}`);
-    console.log(`📦 Express版本: ${require('express/package.json').version}`);
-    console.log('');
-    console.log('📋 主要功能:');
-    console.log(`   🏠 项目导航: http://localhost:${PORT}/`);
-    console.log(`   📁 项目列表API: http://localhost:${PORT}/projects`);
-    console.log(`   🔍 文件浏览API: http://localhost:${PORT}/api/browse/`);
-    console.log(`   ❤️ 健康检查: http://localhost:${PORT}/health`);
-    console.log(`   📊 服务器状态: http://localhost:${PORT}/api/status`);
-    console.log('');
-    console.log('📂 项目访问示例:');
-    console.log(`   📱 webApp项目: http://localhost:${PORT}/webApp/`);
-    console.log(`   📝 博客项目: http://localhost:${PORT}/blog/ (如果存在)`);
-    console.log('');
-    console.log('🔧 部署说明:');
-    console.log('   • 适用于GitHub + Vercel部署');
-    console.log('   • 支持多项目静态文件托管');
-    console.log('   • 包含安全头和错误处理');
-    console.log('');
-    console.log('💡 提示: 按 Ctrl+C 停止服务器');
-    console.log('='.repeat(70));
-});
-
-// 优雅关闭处理
-const gracefulShutdown = (signal) => {
-    console.log(`\n📡 收到 ${signal} 信号，正在优雅关闭服务器...`);
-    server.close(() => {
-        console.log('✅ 服务器已安全关闭');
-        process.exit(0);
-    });
-    
-    // 强制关闭超时
-    setTimeout(() => {
-        console.log('⚠️ 强制关闭服务器');
-        process.exit(1);
-    }, 10000);
-};
-
-process.on('SIGINT', () => gracefulShutdown('SIGINT'));
-process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
-
-// 未捕获异常处理
-process.on('uncaughtException', (err) => {
-    console.error('💥 未捕获的异常:', err);
-    process.exit(1);
-});
-
-process.on('unhandledRejection', (reason, promise) => {
-    console.error('💥 未处理的Promise拒绝:', reason);
-    process.exit(1);
-});
+// 导出 Vercel 函数
+module.exports = app;
