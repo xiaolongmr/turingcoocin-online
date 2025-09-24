@@ -1,24 +1,25 @@
-﻿<!DOCTYPE html>
-<html lang="en" class="no-ie" style="overflow:hidden;">
+<!DOCTYPE html>
+<html lang="en" class="no-ie">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache" />
     <title>Document</title>
     <link id="hostStyle" rel="stylesheet" href="../styles/styles.css">
     <link id="theme" rel="stylesheet" href="../styles/topcoat-desktop-dark.min.css">
     <link id="themeMe" rel="stylesheet" href="../styles/mainStyles-dark.css">
+    
+    <!-- CEP 环境模拟器 - 用于在浏览器中运行 -->
+    <script src="../code/libs/CEPSimulator.js"></script>
 </head>
 
 <body class="hostElt">
-    <div class="headerPage">
-        <div class="headerPageBox topcoat-range">
-            <div class="headerNr">
-                <div class="header_1"> <img class="headerIcon1" src="../images/TopBarText.svg" alt="" /> </div>
-                <div class="header_2"> <img class="headerIcon2" src="../images/LOGO.svg" alt="" /> </div>
-            </div>
-        </div>
+    <div class="web_top hostElt">
+        <div> <input type="button" class="serm topcoat-button" id="upLoadJsx" value="上传脚本"> </div>
+    </div>
+    <div class="centerPage">
+        <div class="centerPageBox" id="listBar"> </div>
     </div>
     <script src="../code/libs/CSInterface.js"></script>
     <script src="../code/libs/themeManager.js"></script>
@@ -29,7 +30,7 @@
     <script src="../code/js/public/globalDefined.js"></script>
     <script src="../code/js/public/sendEvent.js"></script>
     <script src="../code/js/public/cepAlert.js"></script>
-    <script src="../code/js/header/headerMain.js"></script>
+    <script src="../code/js/Cloud/cloudMain.js"></script>
 </body>
 
 </html>

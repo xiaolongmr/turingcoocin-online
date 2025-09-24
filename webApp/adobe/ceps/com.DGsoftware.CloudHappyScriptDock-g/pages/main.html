@@ -21,38 +21,41 @@
 	<!--外部导入我的风格样式-->
 	<link id="themeMe" rel="stylesheet" href="../styles/mainStyles-dark.css">
 
+	<!-- CEP 环境模拟器 - 用于在浏览器中运行 -->
+	<script src="../code/libs/CEPSimulator.js"></script>
+
 </head>
 
 
 <!--这里的类是改变背景颜色的-->
 
-<body class="hostElt">
+<body class="hostElt" style="">
 
 	<div class="box">
 
 		<div class="header">
-			<iframe enable-nodejs class="headerFw" scrolling="no" id="HeaderMe"></iframe>
+			<iframe enable-nodejs="" class="headerFw" scrolling="no" id="HeaderMe" src="../pages/Header.html"></iframe>
 		</div>
 
 		<div class="center">
 
 			<div class="tab-content" id="content_collect">
-				<iframe enable-nodejs class="centerFw" id="web_collect"></iframe>
+				<iframe enable-nodejs="" class="centerFw" id="web_collect" src="../pages/list_collect.html"></iframe>
 			</div>
 
 
-			<div class="tab-content  hideElem" id="content_userJsx">
-				<iframe enable-nodejs class="centerFw" id="web_userJsx"></iframe>
+			<div class="tab-content hideElem" id="content_userJsx">
+				<iframe enable-nodejs="" class="centerFw" id="web_userJsx" src="../pages/UserJsx_collect.html"></iframe>
 			</div>
 
 
-			<div class="tab-content  hideElem" id="content_cloudJsx">
-				<iframe enable-nodejs class="centerFw" id="web_cloudJsx"></iframe>
+			<div class="tab-content hideElem" id="content_cloudJsx">
+				<iframe enable-nodejs="" class="centerFw" id="web_cloudJsx" src="../pages/cloud_collect.html"></iframe>
 			</div>
 
 
-			<div class="tab-content  hideElem" id="content_techSupport">
-				<iframe enable-nodejs class="centerFw" id="web_techSupport"></iframe>
+			<div class="tab-content hideElem" id="content_techSupport">
+				<iframe enable-nodejs="" class="centerFw" id="web_techSupport" src="../pages/me_collect.html"></iframe>
 			</div>
 
 
@@ -64,29 +67,29 @@
 			<div class="backStyle hostBgd" id="tabs">
 
 				<div class="iconBox">
-					<div class="topcoat-button--quiet child" title="用户收藏" id="tab_collect">
-						<img class="icon" src="../images/List.svg" alt="" />
+					<div class="topcoat-button--quiet child tab-active" title="用户收藏" id="tab_collect">
+						<img class="icon" src="../images/List.svg" alt="">
 						<p class="iconText">收藏</p>
 					</div>
 				</div>
 
 				<div class="iconBox">
 					<div class="topcoat-button--quiet child" title="本地脚本" id="tab_userJsx">
-						<img class="icon" src="../images/local.svg" alt="" />
+						<img class="icon" src="../images/local.svg" alt="">
 						<p class="iconText">本地</p>
 					</div>
 				</div>
 
 				<div class="iconBox">
 					<div class="topcoat-button--quiet child" title="云端脚本" id="tab_cloudJsx">
-						<img class="icon" src="../images/Cloud.svg" alt="" />
+						<img class="icon" src="../images/Cloud.svg" alt="">
 						<p class="iconText">云端</p>
 					</div>
 				</div>
 
 				<div class="iconBox">
 					<div class="topcoat-button--quiet child" title="技术支持" id="tab_techSupport">
-						<img class="icon" src="../images/ME.svg" alt="" />
+						<img class="icon" src="../images/ME.svg" alt="">
 						<p class="iconText">关于</p>
 					</div>
 				</div>
@@ -103,7 +106,7 @@
 		<div class="alert_Box0">云乐脚本坞</div>
 
 		<div class="alert_Box1">
-			<img class="alert_Icon" src="../images/alert/logo.svg" alt="" />
+			<img class="alert_Icon" src="../images/alert/logo.svg" alt="">
 		</div>
 
 		<div class="alert_Box2">已发送脚本命令</div>
@@ -129,6 +132,9 @@
 	<script src="../code/js/public/menuFlyout.js"></script>
 
 	<script src="../code/js/main/mainMain.js"></script>
+
+
+
 
 </body>
 
