@@ -26,7 +26,7 @@
       "destination": "/api/server"
     },
     {
-      "source": "/webapp/(?!.*\\.ini$)(.*)",
+      "source": "/webapp/(?!.*\\.(ini|jsx)$)(.*)",
       "destination": "/api/server"
     }
   ],
@@ -41,6 +41,19 @@
   "headers": [
     {
       "source": "/(.*\\.ini)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.jsx)",
       "headers": [
         {
           "key": "Content-Type",
