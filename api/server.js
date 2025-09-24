@@ -132,10 +132,7 @@ app.get('/projects', (req, res) => {
     }
 });
 
-// 快捷访问webApp项目
-app.get('/webapp', (req, res) => {
-  res.redirect('/webApp/');
-});
+// 快捷访问webApp项目（已移动到下方统一处理）
 
 // CEP扩展便捷访问路由
 // Green版本（已解密）

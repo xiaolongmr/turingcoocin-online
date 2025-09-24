@@ -2,7 +2,31 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/green",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/green/(.*)",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/original",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/original/(.*)",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/webapp",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/webapp/(.*)",
       "destination": "/api/server"
     }
   ],
@@ -13,5 +37,20 @@
     "api/server.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*\\.ini)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
