@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..'), {
     dotfiles: 'ignore',
     etag: false,
-    extensions: ['html', 'htm', 'js', 'css', 'png', 'jpg', 'gif', 'svg', 'ico', 'jsx'],
+    extensions: ['html', 'htm', 'js', 'css', 'png', 'jpg', 'gif', 'svg', 'ico', 'jsx', 'ini'],
     index: ['index.html'],
     maxAge: 0, // 禁用缓存，适合开发环境
     redirect: false,
@@ -37,6 +37,8 @@ app.use(express.static(path.join(__dirname, '..'), {
             res.set('Content-Type', 'text/css; charset=utf-8');
         } else if (filePath.endsWith('.html')) {
             res.set('Content-Type', 'text/html; charset=utf-8');
+        } else if (filePath.endsWith('.ini')) {
+            res.set('Content-Type', 'text/plain; charset=utf-8');
         }
         // 禁用缓存头
         res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
