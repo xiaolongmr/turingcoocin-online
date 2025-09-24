@@ -137,7 +137,7 @@ app.get('/projects', (req, res) => {
 // CEP扩展便捷访问路由
 // Green版本（已解密）
 app.get('/green', (req, res) => {
-  res.redirect('/webApp/adobe/ceps/com.DGsoftware.CloudHappyScriptDock-y/pages/main.html');
+  res.redirect('/webApp/adobe/ceps/com.DGsoftware.CloudHappyScriptDock/pages/main.html');
 });
 
 app.get('/green/:page', (req, res) => {
@@ -151,7 +151,7 @@ app.get('/green/:page', (req, res) => {
   };
   
   const fileName = pageMap[page] || `${page}.html`;
-  res.redirect(`/webApp/adobe/ceps/com.DGsoftware.CloudHappyScriptDock-y/pages/${fileName}`);
+  res.redirect(`/webApp/adobe/ceps/com.DGsoftware.CloudHappyScriptDock/pages/${fileName}`);
 });
 
 // 原版（参考）
