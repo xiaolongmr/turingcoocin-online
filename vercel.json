@@ -26,7 +26,7 @@
       "destination": "/api/server"
     },
     {
-      "source": "/webapp/(.*)",
+      "source": "/webapp/(?!.*\\.ini$)(.*)",
       "destination": "/api/server"
     }
   ],
