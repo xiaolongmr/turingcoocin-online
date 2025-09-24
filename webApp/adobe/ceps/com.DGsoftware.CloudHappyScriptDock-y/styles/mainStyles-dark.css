@@ -1,0 +1,476 @@
+/*我的CSS样式*/
+
+
+/*入口页面CSS基础布局-------------------------------------------------------------*/
+
+/* 滚动条*/
+
+/* 滚动条的滑轨背景颜色 */
+::-webkit-scrollbar-track {
+    background-color:#333434;
+}
+ 
+/* 滑块颜色 */
+::-webkit-scrollbar-thumb {
+    background-color:#6B6B6B;
+	border-radius: 0px;
+} 
+ 
+/* 滑轨两头的监听按钮颜色 */
+::-webkit-scrollbar-button {
+    background-color: #3B06D1;
+	border-radius: 0px;
+	height: 0px;
+}
+
+/* 滚动条宽度 */ 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+
+html,body{
+width: 100%;
+height: 100%;
+overflow:hidden;
+margin:0; 
+padding:0;
+}
+
+
+.box {
+width:100%;
+height: 100%;
+margin:0; 
+padding:0;
+}
+
+
+.header{
+width: 100%;
+height:92px;
+position: fixed;
+top: 0px;
+}
+
+.center {
+margin-top: 92px;
+height:calc(100% - 147px); 
+width: 100%;
+}
+
+.footer {
+height:55px;
+width:100%;
+position: fixed;
+bottom:0px;
+}
+
+.rowLine{
+    opacity: 0.1;
+}
+
+.hideElem {
+    display: none;
+}
+
+.tab-content {
+	width: 100%;
+	height: 100%;
+}
+
+.tab-active {
+    border: 1px solid #333434;
+    background-color: #3f4041;
+    box-shadow: inset 0 1px rgba(0, 0, 0, .05)
+}
+
+
+/*提示框=========================*/
+.alert{
+    width: calc(100% - 80px);
+    height: 120px;
+	
+    top: 30%;
+    position: fixed;
+	
+	padding: 0px;
+	
+	margin: 0px;
+    margin-left: 40px;
+    opacity: 1;
+	border: none;
+    border-radius: 5px;
+    text-align: center;
+	
+	overflow: hidden;	
+	
+    -webkit-box-shadow: 5px 5px 5px rgba(166,166,166,0.5);
+    box-shadow: 0px 0px 5px rgba(166,166,166,0.5);
+			
+}
+
+.alert_Box0 {
+    width: 100%;
+    height: 23px;
+    margin-top: 3px;
+
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(224,224,224,0.30);
+}
+
+.alert_Box1 {
+	width:100%;
+	overflow: hidden;
+}
+
+.alert_Box2 {
+	width:100%;	
+	overflow: hidden;
+}
+
+.alert_Icon {
+	height: 50px;
+    width: 50px;
+	margin-top: 10px;
+}
+
+/*提示框==========================*/
+
+
+/*底Tabs布局样式-------------------------------------------------------------*/
+.backStyle{
+    width: 100%;
+    height: 55px;
+    position: absolute;
+	text-align: center;	
+	border-top: 1px solid rgba(224,224,224,0.20);
+}
+
+.iconBox{
+    display: inline-table;
+    width: 35px;
+    height: 100%;
+	overflow:hidden;
+	padding-top: 4px;	
+}
+
+.icon{
+	width: 25px;
+	height: auto;
+	margin-top: 3px;
+	filter: drop-shadow(#F5F5F5 40px 0);
+	-webkit-filter: drop-shadow(#F5F5F5 40px 0);
+	transform: translateX(-40px);
+	-webkit-transform: translateX(-40px);
+}
+
+.iconText{
+	margin-top: -8px;
+}
+
+
+.child {
+    display: table-cell;
+	text-align-last: center;
+}
+
+
+
+
+/*头页面布局样式-------------------------------------------------------------*/
+.headerFw{
+    width: 100%;
+    height: 92px;
+	border: none;
+}
+
+.headerPage{
+    width: 100%;
+    height: 92px;
+}
+
+.headerPageBox{
+	margin: 6px;
+    height: 78px;
+    border-radius: 5px;
+	overflow: hidden;
+}
+
+.imgAds{
+	width: 100%;
+}
+
+.headerNr {
+	
+    width: 100%; 
+	height:78px;
+	
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-radius: 0px;
+		
+    box-shadow: none;
+    border: none;
+    overflow: hidden;	
+	
+	background: rgba(74,74,74,1.00);
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+ 
+	-webkit-box-orient: horizontal;   /*属性值：[horizontal]横向/[vertical]纵向*/
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+}
+
+.header_1 {
+	width:calc(100% - 60px);
+	overflow: hidden;
+}
+
+.header_2 {
+	width: 60px;
+}
+
+.headerIcon1 {
+	margin: 12px;
+	height: 55px;
+}
+
+.headerIcon2 {
+	margin: 12px;
+	height: 35px;
+}
+
+
+
+/*中页面布局样式-------------------------------------------------------------*/
+
+.centerFw{
+    width: 100%;
+    height: 100%;
+	border: none;
+}
+
+.centerPage{
+    width: 100%;
+    height: calc(100% - 34px); 
+	background: rgba(0, 0, 0, .2);
+	margin: 0;
+	padding: 0;	
+	overflow:auto;
+	overflow-x: hidden;	
+}
+
+.centerPageBox{
+    height: 100%;
+    width: 100%;
+    border: rgba(96,96,96,1.00);
+}
+
+
+.web_top {
+    width: 100%;
+    height: 34px;
+    border-bottom: 1px solid rgba(224,224,224,0.20);
+    border-top: 1px solid rgba(224,224,224,0.20);
+}
+
+.serm {
+	width:calc(100% - 12px); 
+	height: 22px;
+	margin: 6px;
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+
+.jsxBar {
+    height: 22px;
+    width: 100%; 
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-radius: 0px;
+		
+    box-shadow: none;
+    border: none;
+    overflow: hidden;	
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+ 
+	-webkit-box-orient: horizontal;   /*属性值：[horizontal]横向/[vertical]纵向*/
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+	
+	border-bottom: 1px solid rgba(106,106,106,0.5);
+
+}
+
+.jsxBox0 {
+	width:20px; 
+	overflow: hidden;
+}
+
+.jsxBox1 {
+	width:calc(100% - 40px);
+    height: 100%;
+	padding-left: 3px;
+	overflow: hidden;
+}
+
+.jsxBox2 {
+	width:20px; 
+	text-align-last:left;
+}
+
+
+.jsxIcon {   
+    height: 18px;
+    width: 18px;	
+    margin: 2px;
+	margin-left: 4px;
+	opacity: 0.8;
+}
+
+.jsxIcon:hover {   
+	opacity: 0.5;
+}
+
+.jsxIcon:active {   
+	opacity: 0.3;
+}
+
+
+
+.sum {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 3px;
+}
+
+.folderName {
+    width: 100%;
+    height: 22px;
+    font-weight: bold;
+    text-align: center;
+	margin: 0px;
+	padding-left: 3px;
+}
+
+.jsxNewName {
+    width: 100%;
+    height: 22px;
+	margin: 0px;
+	padding-left: 3px;
+}
+
+.subJsxName {
+    width:100%;
+}
+
+
+.JsxName {
+	
+}
+
+
+.folerIcon {
+	height: 18px;
+    width: 18px;	
+    margin: 2px;
+
+	filter: drop-shadow(#F5F5F5 20px 0);
+	-webkit-filter: drop-shadow(#F5F5F5 20px 0);
+	transform: translateX(-20px);
+	-webkit-transform: translateX(-20px);	
+}
+
+
+
+/*关于页*/
+.row_1 {
+    text-align: center;
+    width: calc(100% - 12px);
+    height: 110px;
+    margin: 6px;
+    margin-bottom: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.row_2 {
+    width: calc(100% - 12px);
+    height: 50px;
+    margin: 6px;
+    margin-bottom: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.row_3 {	
+	text-align: center;	
+	
+	width: calc(100% - 12px); 
+	height: 50px;
+	margin: 6px;
+	margin-bottom: 0px;
+	border:none;
+	box-shadow:none;
+}
+
+.row_4 {	
+	
+	text-align: center;	
+	width: calc(100% - 12px); 
+	height: 120px;
+	margin: 6px;
+	margin-bottom: 0px;
+	border:none;
+	box-shadow:none;
+	position: fixed;
+	bottom:6px;
+}
+
+.meIcon_1 {
+	margin: 3px;
+	width: auto;
+	height: 50px;
+}
+
+.meIcon_4 {
+	margin: 6px;
+	margin-bottom: 0px;
+	width:auto;
+	height: 80px;
+}
+
+.meText_1 {
+	text-align: left;
+}
+
+.meBox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+ 
+	-webkit-box-orient: vertical;   /*属性值：[horizontal]横向/[vertical]纵向*/
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+
+.Nodian {
+	list-style-type:none;
+}
+

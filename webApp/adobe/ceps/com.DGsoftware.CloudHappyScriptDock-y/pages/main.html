@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="no-ie" style="overflow:hidden;">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- 或者这样设置永远不缓存 -->
+	<meta http-equiv="X-UA-Compatible" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+
+	<title>DG Software</title>
+
+	<!--adobe外部导入风格样式,这里不要动-->
+	<link id="hostStyle" rel="stylesheet" href="../styles/styles.css">
+	<link id="theme" rel="stylesheet" href="../styles/topcoat-desktop-dark.min.css">
+
+	<!--外部导入我的风格样式-->
+	<link id="themeMe" rel="stylesheet" href="../styles/mainStyles-dark.css">
+
+</head>
+
+
+<!--这里的类是改变背景颜色的-->
+
+<body class="hostElt">
+
+	<div class="box">
+
+		<div class="header">
+			<iframe enable-nodejs class="headerFw" scrolling="no" id="HeaderMe"></iframe>
+		</div>
+
+		<div class="center">
+
+			<div class="tab-content" id="content_collect">
+				<iframe enable-nodejs class="centerFw" id="web_collect"></iframe>
+			</div>
+
+
+			<div class="tab-content  hideElem" id="content_userJsx">
+				<iframe enable-nodejs class="centerFw" id="web_userJsx"></iframe>
+			</div>
+
+
+			<div class="tab-content  hideElem" id="content_cloudJsx">
+				<iframe enable-nodejs class="centerFw" id="web_cloudJsx"></iframe>
+			</div>
+
+
+			<div class="tab-content  hideElem" id="content_techSupport">
+				<iframe enable-nodejs class="centerFw" id="web_techSupport"></iframe>
+			</div>
+
+
+		</div>
+
+
+		<div class="footer">
+
+			<div class="backStyle hostBgd" id="tabs">
+
+				<div class="iconBox">
+					<div class="topcoat-button--quiet child" title="用户收藏" id="tab_collect">
+						<img class="icon" src="../images/List.svg" alt="" />
+						<p class="iconText">收藏</p>
+					</div>
+				</div>
+
+				<div class="iconBox">
+					<div class="topcoat-button--quiet child" title="本地脚本" id="tab_userJsx">
+						<img class="icon" src="../images/local.svg" alt="" />
+						<p class="iconText">本地</p>
+					</div>
+				</div>
+
+				<div class="iconBox">
+					<div class="topcoat-button--quiet child" title="云端脚本" id="tab_cloudJsx">
+						<img class="icon" src="../images/Cloud.svg" alt="" />
+						<p class="iconText">云端</p>
+					</div>
+				</div>
+
+				<div class="iconBox">
+					<div class="topcoat-button--quiet child" title="技术支持" id="tab_techSupport">
+						<img class="icon" src="../images/ME.svg" alt="" />
+						<p class="iconText">关于</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--提示框-->
+	<div id="H5_Tip" class="topcoat-button alert hideElem">
+
+		<div class="alert_Box0">云乐脚本坞</div>
+
+		<div class="alert_Box1">
+			<img class="alert_Icon" src="../images/alert/logo.svg" alt="" />
+		</div>
+
+		<div class="alert_Box2">已发送脚本命令</div>
+
+	</div>
+
+
+
+
+	<!--外部导入库文件---------------------------------------------------------------------->
+	<script src="../code/libs/CSInterface.js"></script>
+	<script src="../code/libs/themeManager.js"></script>
+	<script src="../code/libs/jquery-2.0.2.min.js"></script>
+	<script src="../code/js/public/loadJsx.js"></script>
+
+	<!--外部导入脚本文件-->
+	<script src="../code/js/public/variable.js"></script>
+	<script src="../code/js/public/tool.js"></script>
+	<script src="../code/js/public/publicFunction.js"></script>
+	<script src="../code/js/public/globalDefined.js"></script>
+	<script src="../code/js/public/sendEvent.js"></script>
+	<script src="../code/js/public/cepAlert.js"></script>
+	<script src="../code/js/public/menuFlyout.js"></script>
+
+	<script src="../code/js/main/mainMain.js"></script>
+
+</body>
+
+</html>
