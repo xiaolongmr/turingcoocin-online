@@ -339,5 +339,14 @@ app.use((err, req, res, next) => {
     `);
 });
 
+// 本地启动服务器（仅在非 Vercel 环境下）
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`🚀 服务器已启动在 http://localhost:${PORT}`);
+        console.log(`📁 静态文件目录: ${path.join(__dirname, '..')}`);
+        console.log(`🔧 支持的文件类型: html, htm, js, css, png, jpg, gif, svg, ico, jsx, ini`);
+    });
+}
+
 // 导出 Vercel 函数
 module.exports = app;
