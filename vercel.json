@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/webApp/(.*)",
+      "dest": "/webApp/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/webApp/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/webApp/**/*.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/webApp/**/*.jsx",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/webApp/**/*.ini",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/webApp/**/*.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}

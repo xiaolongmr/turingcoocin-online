@@ -1,0 +1,22 @@
+{
+  "name": "turingcoocin-online",
+  "version": "1.0.0",
+  "description": "Adobe CEP Extensions Static Files",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Static files, no build needed'",
+    "start": "echo 'Static files served by Vercel'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaolongmr/turingcoocin-online.git"
+  },
+  "keywords": [
+    "adobe",
+    "cep",
+    "extensions",
+    "static"
+  ],
+  "author": "xiaolongmr",
+  "license": "MIT"
+}
