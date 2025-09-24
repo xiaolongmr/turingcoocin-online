@@ -19,13 +19,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 添加请求日志中间件，帮助调试
-app.use((req, res, next) => {
-    console.log(`📝 请求: ${req.method} ${req.url}`);
-    console.log(`📁 文件路径: ${path.join(__dirname, '..', req.url)}`);
-    next();
-});
-
 // 配置静态文件服务，支持Adobe CEP扩展
 app.use(express.static(path.join(__dirname, '..'), {
     dotfiles: 'ignore',
@@ -183,7 +176,13 @@ app.get('/original/:page', (req, res) => {
   res.redirect(`/webApp/adobe/ceps/com.DGsoftware.CloudHappyScriptDock/pages/${fileName}`);
 });
 
-app.get('/webapp/*', (req, res) => {
+// 处理小写 webapp 路径重定向到 webApp（仅限确实是小写的情况）
+app.get('/webapp', (req, res) => {
+    res.redirect('/webApp/');
+});
+
+app.get('/webapp/:project/*', (req, res) => {
+    // 只处理确实是小写 webapp 开头的路径
     const filePath = req.path.replace('/webapp', '/webApp');
     res.redirect(filePath);
 });
