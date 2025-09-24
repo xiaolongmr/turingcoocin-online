@@ -108,8 +108,6 @@ Thumbs.db
 # Project specific files
 package-lock.json
 
-# Adobe related files
-webApp/adobe/
 
 # Build and deployment files (uncomment if needed)
 # dist/

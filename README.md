@@ -39,23 +39,26 @@ www.turingcoocin.online/
 ### 安装和启动
 
 1. 克隆项目到本地
+
 ```bash
 git clone <repository-url>
 cd www.turingcoocin.online
 ```
 
 2. 安装依赖
+
 ```bash
 npm install
 ```
 
 3. 启动服务器
+
 ```bash
 npm start
 ```
 
 4. 访问服务器
-打开浏览器访问 `http://localhost:3000`
+   打开浏览器访问 `http://wwww.z-l.top`
 
 ### 可用路由
 
@@ -73,6 +76,7 @@ npm start
 ### 方法一：通过 GitHub 连接
 
 1. 将项目推送到 GitHub
+
 ```bash
 git add .
 git commit -m "Initial commit"
@@ -86,16 +90,19 @@ git push origin main
 ### 方法二：使用 Vercel CLI
 
 1. 安装 Vercel CLI
+
 ```bash
 npm i -g vercel
 ```
 
 2. 登录 Vercel
+
 ```bash
 vercel login
 ```
 
 3. 部署项目
+
 ```bash
 vercel
 ```
@@ -103,15 +110,18 @@ vercel
 ## 📝 配置说明
 
 ### package.json
+
 - 定义了项目依赖和启动脚本
 - 包含 Express、CORS 等必要依赖
 
 ### server.js
+
 - 主服务器文件，配置了所有路由和中间件
 - 支持静态文件服务和动态内容处理
 - 包含错误处理和优雅关闭机制
 
 ### vercel.json
+
 - Vercel 部署配置文件
 - 指定了 Node.js 运行时和路由规则
 - 配置了生产环境变量
@@ -129,8 +139,8 @@ vercel
 在 `server.js` 中添加新的路由：
 
 ```javascript
-app.get('/your-route', (req, res) => {
-    // 路由处理逻辑
+app.get("/your-route", (req, res) => {
+  // 路由处理逻辑
 });
 ```
 
@@ -149,6 +159,7 @@ app.get('/your-route', (req, res) => {
 ## 🐛 故障排除
 
 ### 端口占用
+
 ```bash
 # Windows
 netstat -ano | findstr :3000
@@ -159,6 +170,7 @@ lsof -ti:3000 | xargs kill -9
 ```
 
 ### 依赖问题
+
 ```bash
 # 清除缓存并重新安装
 npm cache clean --force
@@ -177,4 +189,4 @@ npm install
 ---
 
 **开发者**: TuringCoocin  
-**最后更新**: 2024年12月
+**最后更新**: 2024 年 12 月

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,17 +181,18 @@
                 padding: 20px;
                 margin: 20px;
             }
-            
+
             .nav-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .logo {
                 font-size: 2em;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -246,7 +248,7 @@
             <ul class="info-list">
                 <li>
                     <span class="info-label">服务器地址:</span>
-                    <span class="info-value">http://localhost:3000</span>
+                    <span class="info-value">http://wwww.z-l.top</span>
                 </li>
                 <li>
                     <span class="info-label">根目录:</span>
@@ -258,7 +260,8 @@
                 </li>
                 <li>
                     <span class="info-label">API状态:</span>
-                    <span class="info-value"><a href="/api/status" style="color: #667eea; text-decoration: none;">/api/status</a></span>
+                    <span class="info-value"><a href="/api/status"
+                            style="color: #667eea; text-decoration: none;">/api/status</a></span>
                 </li>
                 <li>
                     <span class="info-label">解密文件数:</span>
@@ -345,7 +348,7 @@
 
         // 添加点击效果
         document.querySelectorAll('.nav-card').forEach(card => {
-            card.addEventListener('click', function(e) {
+            card.addEventListener('click', function (e) {
                 if (e.target.tagName !== 'A') {
                     const firstLink = this.querySelector('.nav-link');
                     if (firstLink) {
@@ -356,4 +359,5 @@
         });
     </script>
 </body>
+
 </html>
