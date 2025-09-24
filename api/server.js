@@ -48,14 +48,14 @@ app.use(express.static(path.join(__dirname, '..'), {
 
 // 根路由 - 显示项目首页
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 // Adobe CEP扩展特殊路由支持
 // 处理CEP扩展的主页面
 app.get('/webApp/adobe/ceps/:extensionName/pages/:pageName', (req, res) => {
   const { extensionName, pageName } = req.params;
-  const filePath = path.join(__dirname, 'webApp', 'adobe', 'ceps', extensionName, 'pages', pageName);
+  const filePath = path.join(__dirname, '..', 'webApp', 'adobe', 'ceps', extensionName, 'pages', pageName);
   
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
@@ -68,7 +68,7 @@ app.get('/webApp/adobe/ceps/:extensionName/pages/:pageName', (req, res) => {
 app.get('/webApp/adobe/ceps/:extensionName/code/*', (req, res) => {
   const { extensionName } = req.params;
   const codePath = req.params[0]; // 获取通配符部分
-  const filePath = path.join(__dirname, 'webApp', 'adobe', 'ceps', extensionName, 'code', codePath);
+  const filePath = path.join(__dirname, '..', 'webApp', 'adobe', 'ceps', extensionName, 'code', codePath);
   
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
@@ -81,7 +81,7 @@ app.get('/webApp/adobe/ceps/:extensionName/code/*', (req, res) => {
 app.get('/webApp/adobe/ceps/:extensionName/styles/*', (req, res) => {
   const { extensionName } = req.params;
   const stylePath = req.params[0];
-  const filePath = path.join(__dirname, 'webApp', 'adobe', 'ceps', extensionName, 'styles', stylePath);
+  const filePath = path.join(__dirname, '..', 'webApp', 'adobe', 'ceps', extensionName, 'styles', stylePath);
   
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
@@ -94,7 +94,7 @@ app.get('/webApp/adobe/ceps/:extensionName/styles/*', (req, res) => {
 app.get('/webApp/adobe/ceps/:extensionName/images/*', (req, res) => {
   const { extensionName } = req.params;
   const imagePath = req.params[0];
-  const filePath = path.join(__dirname, 'webApp', 'adobe', 'ceps', extensionName, 'images', imagePath);
+  const filePath = path.join(__dirname, '..', 'webApp', 'adobe', 'ceps', extensionName, 'images', imagePath);
   
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
@@ -106,7 +106,7 @@ app.get('/webApp/adobe/ceps/:extensionName/images/*', (req, res) => {
 // 动态项目路由 - 自动检测项目目录
 app.get('/projects', (req, res) => {
     try {
-        const projectsDir = __dirname;
+        const projectsDir = path.join(__dirname, '..');
         const items = fs.readdirSync(projectsDir, { withFileTypes: true });
         const projects = items
             .filter(item => item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules')
